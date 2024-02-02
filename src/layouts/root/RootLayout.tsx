@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom'
+import { SideMenu } from '../../components'
 
 export const RootLayout = () => {
     return (
-        <div>
-            RootLayout
+        <div className='dashboard'>
+            <SideMenu/>
             <Outlet/>
         
         </div>

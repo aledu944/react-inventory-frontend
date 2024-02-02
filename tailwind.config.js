@@ -13,6 +13,8 @@ export default {
   },
   darkMode: "class",
   plugins: [nextui({
+    defaultTheme: "dark", 
+    defaultExtendTheme: "dark", // default theme to extend on custom themes
     themes: {
       ...darkTheme
     }

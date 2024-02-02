@@ -1,3 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-['Nunito']
+    }
+}
+
+@layer utilities {
+    .dashboard {
+        @apply flex h-screen relative
+    }
+
+    .sidemenu {
+        @apply absolute h-screen -left-[100%] md:relative md:left-0  bg-stone-950 max-w-64 w-full py-10 px-8
+    }
+
+    .sidemenu__logo {
+        @apply font-extrabold text-xl mb-10 flex items-center
+    }
+
+    .sidemenu__link {
+        @apply flex gap-4 items-center p-3 rounded-lg
+        font-semibold  transition-colors duration-1000 hover:bg-gradient-to-tr from-primary-700 to-primary-600
+    }
+
+    .sidemenu__link span {
+        @apply text-primary text-xl 
+    }
+
+    
+    .sidemenu__link:hover span {
+        @apply text-white 
+    }
+
+    .sidemenu__link--active {
+        @apply bg-gradient-to-br from-primary-700 to-primary-600
+    }
+
+    .sidemenu__link--active span {
+        @apply text-white
+    }
+}

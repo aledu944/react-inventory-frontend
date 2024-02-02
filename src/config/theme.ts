@@ -1,7 +1,8 @@
 import { ConfigThemes } from "@nextui-org/react";
 
 export const darkTheme: ConfigThemes = {
-    light: {
+    
+    dark: {
         layout: {
             radius: {
                 small: '5px',
@@ -10,9 +11,11 @@ export const darkTheme: ConfigThemes = {
             }
         },
         colors: {
-            background: '#18181b',
+            // background: '#27272a',
+            background: '#000',
+
             primary: {
-                DEFAULT: '0182ff',
+                DEFAULT: '#0182ff',
                 '50': '#edfaff',
                 '100': '#d6f3ff',
                 '200': '#b5ecff',
