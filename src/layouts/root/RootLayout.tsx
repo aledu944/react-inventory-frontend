@@ -5,7 +5,9 @@ export const RootLayout = () => {
     return (
         <div className='dashboard'>
             <SideMenu/>
-            <Outlet/>
+            <div className='w-full'>
+                <Outlet/>
+            </div>
         
         </div>
     )
