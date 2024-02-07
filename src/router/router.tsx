@@ -2,23 +2,31 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
 import { RootLayout } from '../layouts';
-import { ProductsPage } from "../pages";
+import { CategoriesPage, NewCategoryPage, ProductsPage } from "../pages";
 
 
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <App/>,
+        element: <App />,
         children: [
             // DASHBOARD
             {
                 path: 'admin',
-                element: <RootLayout/>,
+                element: <RootLayout />,
                 children: [
                     {
                         path: 'products',
-                        element: <ProductsPage/>
+                        element: <ProductsPage />
+                    },
+                    {
+                        path: 'categories',
+                        element: <CategoriesPage />
+                    },
+                    {
+                        path: 'categories/new',
+                        element: <NewCategoryPage />
                     }
                 ]
             }

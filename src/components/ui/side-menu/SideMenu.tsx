@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom"
 import { sidemenuOptions } from '../../../lib/constants';
-import Logo from "../../../assets/logo.png";
+import Logo from "../../../assets/logo.svg";
 
 export const SideMenu = () => {
 
@@ -11,7 +11,7 @@ export const SideMenu = () => {
         <aside className="sidemenu">
             
             <div className="sidemenu__logo">
-                <img className="max-w-[60px]" src={ Logo } alt="Inventario" />
+                <img className="max-w-[50px]" src={ Logo } alt="Inventario" />
                 Inventario
             </div>
 

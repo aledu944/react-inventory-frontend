@@ -1,6 +1,8 @@
 import { useEffect } from "react";
-import { HeaderPage, ProductsTable } from "../../components"
+
 import { useProductStore } from "../../stores";
+import { HeaderPage, ProductsTable } from "../../components"
+
 
 export const ProductsPage = () => {
 
@@ -21,7 +23,7 @@ export const ProductsPage = () => {
                 description="Gestiona los productos de tu inventario"
             />
             <ProductsTable
-                products={ products }
+                products={products}
             />
         </>
     )
