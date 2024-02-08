@@ -1,5 +1,7 @@
 import { formatDate } from "../../lib";
 import { ISimpleProduct } from '../../interfaces/products/products-response';
+
+import { ProductsTableActions } from "..";
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
 
 interface Props {
@@ -34,7 +36,9 @@ export const ProductsTable = ({ products }: Props) => {
                                 <TableCell>{ product.price }</TableCell>
                                 <TableCell>{ product.stock }</TableCell>
                                 <TableCell>{ formatDate(product.createdAt) }</TableCell>
-                                <TableCell>Acciones</TableCell>
+                                <TableCell>
+                                    <ProductsTableActions/>
+                                </TableCell>
                             </TableRow>
 
                         ))
