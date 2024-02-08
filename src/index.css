@@ -15,7 +15,7 @@
     }
 
     .sidemenu {
-        @apply absolute h-screen -left-[100%] md:relative md:left-0  bg-stone-950 max-w-72 w-full py-10 px-8
+        @apply absolute h-screen flex flex-col -left-[100%] md:relative md:left-0  bg-stone-950 max-w-72 w-full py-10 px-8
     }
 
     .sidemenu__logo {
