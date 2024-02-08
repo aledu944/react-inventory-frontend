@@ -1,5 +1,6 @@
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
+import { formatDate } from "../../lib";
 import { ISimpleProduct } from '../../interfaces/products/products-response';
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
 
 interface Props {
     products: ISimpleProduct[]
@@ -26,13 +27,13 @@ export const ProductsTable = ({ products }: Props) => {
                         products.map((product) => (
                             <TableRow key={product.id}>
                                 <TableCell>
-                                    <img className="max-w-10" src={ baseUrlImage + product.image } alt={ product.name } />
+                                    <img className="max-w-14" src={ baseUrlImage + product.image } alt={ product.name } />
                                 </TableCell>
                                 <TableCell>{ product.name }</TableCell>
                                 <TableCell>{ product.category.name }</TableCell>
                                 <TableCell>{ product.price }</TableCell>
                                 <TableCell>{ product.stock }</TableCell>
-                                <TableCell>{ product.createdAt }</TableCell>
+                                <TableCell>{ formatDate(product.createdAt) }</TableCell>
                                 <TableCell>Acciones</TableCell>
                             </TableRow>
 

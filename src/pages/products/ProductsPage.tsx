@@ -17,7 +17,7 @@ export const ProductsPage = () => {
     return (
         <>
             <HeaderPage
-                btnPath="/products/new"
+                btnPath="new"
                 btnTitle="Crear producto"
                 title="Productos"
                 description="Gestiona los productos de tu inventario"
