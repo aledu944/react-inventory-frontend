@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
 import { RootLayout } from '../layouts';
-import { CategoriesPage, NewCategoryPage, NewProductPage, ProductsPage } from "../pages";
+import { CategoriesPage, EditProductPage, NewCategoryPage, NewProductPage, ProductsPage } from "../pages";
 
 
 
@@ -23,6 +23,10 @@ export const router = createBrowserRouter([
                     {
                         path: 'products/new',
                         element: <NewProductPage />
+                    },
+                    {
+                        path: 'products/:slug/edit',
+                        element: <EditProductPage />
                     },
                     {
                         path: 'categories',

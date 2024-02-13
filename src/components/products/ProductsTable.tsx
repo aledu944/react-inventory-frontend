@@ -37,7 +37,10 @@ export const ProductsTable = ({ products }: Props) => {
                                 <TableCell>{ product.stock }</TableCell>
                                 <TableCell>{ formatDate(product.createdAt) }</TableCell>
                                 <TableCell>
-                                    <ProductsTableActions/>
+                                    <ProductsTableActions
+                                        productId={ `${product.id}` }
+                                        productSlug={ product.slug }
+                                    />
                                 </TableCell>
                             </TableRow>
 
