@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
 import { RootLayout } from '../layouts';
-import { CategoriesPage, EditProductPage, NewCategoryPage, NewProductPage, ProductsPage } from "../pages";
+import { CartPage, CategoriesPage, EditProductPage, NewCategoryPage, NewProductPage, ProductsPage } from "../pages";
 
 
 
@@ -35,7 +35,11 @@ export const router = createBrowserRouter([
                     {
                         path: 'categories/new',
                         element: <NewCategoryPage />
-                    }
+                    },
+                    {
+                        path: 'cart',
+                        element: <CartPage />
+                    },
                 ]
             }
         ]

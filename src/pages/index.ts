@@ -1,3 +1,4 @@
+export { CartPage } from './cart/CartPage';
 export * from './categories/CategoriesPage';
 export * from './categories/NewCategoryPage';
 export * from './products/EditProductPage'

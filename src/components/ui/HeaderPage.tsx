@@ -19,7 +19,7 @@ export const HeaderPage = ({ btnPath, btnTitle, description, title }: Props) => 
 
     return (
         <section className='pt-8'>
-            <div className='container flex  justify-between items-center'>
+            <div className='header'>
 
                 <div>
                     <h1 className='text-2xl font-bold'>{title}</h1>

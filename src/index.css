@@ -30,7 +30,6 @@
     .sidemenu__link span {
         @apply text-primary text-xl 
     }
-
     
     .sidemenu__link:hover span {
         @apply text-white 
@@ -42,6 +41,18 @@
 
     .sidemenu__link--active span {
         @apply text-white
+    }
+
+    .header {
+        @apply container flex flex-col gap-4 md:flex-row justify-between md:items-center
+    }
+
+    .product__list {
+        @apply grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
+    }
+
+    .product__card {
+        @apply bg-stone-900 max-w-[250px] p-4 rounded-md
     }
 }
 
