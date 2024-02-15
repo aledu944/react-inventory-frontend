@@ -2,11 +2,13 @@ import { Link, useLocation } from "react-router-dom"
 import { sidemenuOptions } from '../../../lib/constants';
 import Logo from "../../../assets/logo.svg";
 import { Button } from "@nextui-org/react";
+import { useAuthStore } from "../../../stores";
 
 export const SideMenu = () => {
 
     const { pathname } = useLocation();
-
+    const logout = useAuthStore(state => state.logout);
+    const user = useAuthStore(state => state.user);
 
     return (
         <aside className="sidemenu">
@@ -36,9 +38,9 @@ export const SideMenu = () => {
             
             <div className="shadow-lg bg-stone-900 px-4 py-6 rounded-2xl text-center">
                 <img className="mx-auto max-w-14 mb-4" src="https://lh3.googleusercontent.com/a/ACg8ocK2GAvSNuwN-zRMJkMVv8UPMuwaDZVyBGHyPR-pU4ei1S4=s96-c-rg-br100"/>
-                <h3>Innova Code</h3>
-                <p className="text-sm">admin@innovacode.online</p>
-                <Button className="mt-4" variant="light" color="danger" fullWidth>Cerrar Sesion</Button>
+                <h3>{ user?.name }</h3>
+                <p className="text-sm">{ user?.email }</p>
+                <Button onClick={logout} className="mt-4" variant="light" color="danger" fullWidth>Cerrar Sesion</Button>
             </div>
 
 

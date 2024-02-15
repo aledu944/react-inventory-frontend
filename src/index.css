@@ -10,12 +10,32 @@
 }
 
 @layer utilities {
+
+    .auth__layout {
+        background-image: url('./assets/images/bg-auth.jpg');
+        background-color: rgba(0, 0, 0, 0.575);
+        background-blend-mode: color;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login__form {
+        @apply bg-stone-900 py-8 px-6 max-w-[500px] w-full rounded-lg
+    }
+
     .dashboard {
         @apply flex h-screen relative
     }
 
     .sidemenu {
-        @apply absolute h-screen flex flex-col -left-[100%] md:relative md:left-0  bg-stone-950 max-w-72 w-full py-10 px-8
+        @apply absolute h-screen flex flex-col -left-[100%] md:relative md:left-0 bg-stone-950 max-w-72 w-full py-10 px-8
     }
 
     .sidemenu__logo {
@@ -23,16 +43,15 @@
     }
 
     .sidemenu__link {
-        @apply flex gap-4 items-center p-3 rounded-lg
-        font-semibold  transition-colors duration-1000 hover:bg-gradient-to-tr from-primary-700 to-primary-600
+        @apply flex gap-4 items-center p-3 rounded-lg font-semibold transition-colors duration-1000 hover:bg-gradient-to-tr from-primary-700 to-primary-600
     }
 
     .sidemenu__link span {
-        @apply text-primary text-xl 
+        @apply text-primary text-xl
     }
-    
+
     .sidemenu__link:hover span {
-        @apply text-white 
+        @apply text-white
     }
 
     .sidemenu__link--active {
@@ -61,8 +80,8 @@
     .container {
         @apply max-w-[90%] mx-auto
     }
-    
+
     .btn-primary {
-        @apply bg-gradient-to-br from-primary-600 to-primary-700
+        @apply bg-gradient-to-br from-primary-600 to-indigo-700
     }
 }

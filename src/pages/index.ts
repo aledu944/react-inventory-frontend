@@ -1,3 +1,5 @@
+export { LoginPage } from './auth/LoginPage';
+
 export { CartPage } from './cart/CartPage';
 export * from './categories/CategoriesPage';
 export * from './categories/NewCategoryPage';

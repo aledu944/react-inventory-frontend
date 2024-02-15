@@ -1,3 +1,5 @@
+export { LoginForm } from './auth/LoginForm';
+
 export { ProductList } from './products/ProductList';
 
 export { CategoriesTable } from './categories/CategoriesTable'

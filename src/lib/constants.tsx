@@ -1,4 +1,4 @@
-import { LuAreaChart, LuClipboardList, LuLayers, LuShoppingCart } from "react-icons/lu";
+import { LuAreaChart, LuClipboardList, LuLayers, LuShoppingCart, LuUsers2 } from "react-icons/lu";
 
 export const sidemenuOptions = [
     {
@@ -10,6 +10,11 @@ export const sidemenuOptions = [
         path: 'categories',
         name: 'Categorias',
         icon: <LuLayers />
+    },
+    {
+        path: 'users',
+        name: 'Usuarios',
+        icon: <LuUsers2 />
     },
     {
         path: 'cart',
