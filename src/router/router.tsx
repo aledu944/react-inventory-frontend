@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
 import { AuthLayout, RootLayout } from '../layouts';
-import { CartPage, CategoriesPage, EditProductPage, LoginPage, NewCategoryPage, NewProductPage, ProductsPage } from "../pages";
+import { CartPage, CategoriesPage, CheckoutPage, EditProductPage, LoginPage, NewCategoryPage, NewProductPage, ProductsPage } from "../pages";
 
 
 
@@ -39,6 +39,10 @@ export const router = createBrowserRouter([
                     {
                         path: 'cart',
                         element: <CartPage />
+                    },
+                    {
+                        path: 'checkout',
+                        element: <CheckoutPage />
                     },
                 ]
             },

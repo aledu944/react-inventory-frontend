@@ -73,6 +73,18 @@
     .product__card {
         @apply bg-stone-900 max-w-[250px] p-4 rounded-md
     }
+
+    .cart__item {
+        @apply flex bg-stone-900 px-3 py-4 gap-4 items-center rounded-lg
+    }
+
+    .checkout {
+        @apply container pt-8 grid grid-cols-5 gap-8
+    }
+
+    .checkout__form {
+        @apply bg-stone-900 p-6 rounded-lg space-y-4
+    }
 }
 
 

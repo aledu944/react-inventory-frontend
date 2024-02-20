@@ -6,3 +6,4 @@ export * from './categories/NewCategoryPage';
 export * from './products/EditProductPage'
 export * from './products/NewProductPage';
 export * from './products/ProductsPage';
+export * from './cart/CheckoutPage';

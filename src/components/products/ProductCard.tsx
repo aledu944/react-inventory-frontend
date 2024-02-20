@@ -1,13 +1,18 @@
+import { useCartStore } from '../../stores';
 import { ISimpleProduct } from '../../interfaces'
 
 import { Button } from '@nextui-org/react';
 import { LuShoppingCart } from 'react-icons/lu';
+
 
 interface Props {
     product: ISimpleProduct
 }
 
 export const ProductCard = ({ product }: Props) => {
+
+    const addProductToCart = useCartStore(state => state.addProductToCart);
+
 
     const baseUrlImage = import.meta.env.VITE_IMAGE_URL;
 
@@ -24,7 +29,7 @@ export const ProductCard = ({ product }: Props) => {
                 <p>Stock: { product.stock }u.</p>
             </div>
 
-            <Button className='btn-primary' startContent={ <LuShoppingCart/> } fullWidth>Agregar al carrito</Button>
+            <Button onClick={ () => addProductToCart( product ) } className='btn-primary' startContent={ <LuShoppingCart/> } fullWidth>Agregar al carrito</Button>
         </li>
     )
 }

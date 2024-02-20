@@ -12,11 +12,6 @@ export const sidemenuOptions = [
         icon: <LuLayers />
     },
     {
-        path: 'users',
-        name: 'Usuarios',
-        icon: <LuUsers2 />
-    },
-    {
         path: 'cart',
         name: 'Carrito',
         icon: <LuShoppingCart />
