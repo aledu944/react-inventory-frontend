@@ -14,6 +14,8 @@ interface Props {
 
 export const EditProductForm = ({ product }: Props) => {
 
+    const baseUrlImage = import.meta.env.VITE_IMAGE_URL
+
     const navigate = useNavigate();
     const [image, setImage] = useState<File>();
     const [preImage, setPreImage] = useState(product?.image);
@@ -148,7 +150,7 @@ export const EditProductForm = ({ product }: Props) => {
                 </div>
 
                 <div className=' w-full'>
-                    <img src={preImage}  className='max-w-[400px] mx-auto' />
+                    <img src={baseUrlImage + preImage}  className='max-w-[400px] mx-auto' />
                 </div>
 
 
