@@ -1,7 +1,11 @@
 import { CartList, CheckoutForm } from '../../components';
 import { HeaderPage } from '../../components/ui/HeaderPage';
+import { useCartStore } from '../../stores';
 
 export const CheckoutPage = () => {
+
+    const cart = useCartStore( state => state.cart );
+
     return (
         <>
             <HeaderPage
@@ -11,12 +15,22 @@ export const CheckoutPage = () => {
                 title='Finalizar venta'
             />
 
-            <div className='checkout'>
-                <CartList/>
+            {
+                cart.length == 0
+                ? (
+                    <section className='pt-8 text-center text-xl'>
+                        <p>No hay productos en el carrito</p>
+                    </section>
+                )
+                : (
+                    <div className='checkout'>
+                        <CartList/>
+                        <CheckoutForm/>
+                    </div>
 
-                <CheckoutForm/>
+                )
 
-            </div>
+            }
         
         </>
     )
